@@ -4,42 +4,32 @@
     font-family: 'raleway', sans-serif;
 }
 /*Index*/
-.header{
+.header {
+    background-image: linear-gradient(#f0d0cb, #8c2f39);
     position: sticky;
-    top: 0px;
+    top: 0%;
+
+    &__bar{
+        width: 100%;
+    }
+
+    li {
+        color: #8c2f39;
+        font-size: 15rem;
+    }
+    div {
+        flex-grow: initial;
+    }
 }
 .navbar{
     width: 100%;
 }
 .nav-link{
-   color: #8c2f39; 
-   font-size: 1.5rem;
+    color: #8c2f39;
+    font-size: 1.5rem;
 }
-.navbar-collapse {
+.navbar-collapse{
     flex-grow: initial;
-}
-/*Index*/
-/*.header{
-    background-image: linear-gradient(#8c2f39, #f0d0cb);
-    position: sticky;
-    top: 0px;
-    display: flex;
-    justify-content: space-around;
-}
-.header__nav{
-    display: flex;
-    align-items: center;
-}
-.header__lista {
-    display: flex;
-}
-.header__item a{
-    font-size: 20px;
-    margin: 0 20px;
-    text-align: center;
-    list-style-type: none;
-    text-decoration: none;
-    color: black;
 }
 
 .main__index{
@@ -86,38 +76,35 @@
     border: 2px solid #8c2f39;
     color: white;
 }
-.footer-index{
-    background-image: linear-gradient(#f0d0cb, #8c2f39);
+.footer{
+    color: #8c2f39;
+    font-size: 1.5rem;
+    padding: 30px;
+    margin-top: 20px;
+    border-top: 1px solid black;
 }
-.footer-index{
+.footer__ul{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
-.footer__tittle-index{
+.footer__ul-li{
+    list-style: none;
+    margin: 0px 10px;
+
+}
+.bi{
+    font-size: 2rem;
+}
+.bi:hover{
+    color: bla;
+}
+.footer__tittle{
     color: #8c2f39;
     font-size: 1.5em;
     text-transform: uppercase;
     text-shadow: 5px 5px 10px white;
     text-align: center;
     padding: 10px;
-}
-.footer__div-catalogo{
-    display: flex;
-    flex-direction: column;
-}
-.footer__description-index{
-    color: #8c2f39;
-    font-size: 1rem;
-    padding: 5px;
-    margin: 5px;
-    color: black;
-    text-align: center;
-    letter-spacing: 0.1rem;
-}
-.black, .blackDos, .blackTres, .blackCuatro, .blackCinco, .blackSeis, .blackSiete{
-    font-weight: bold;
-    color: black;
-    text-align: center;
 }
 /*Fin Index*/
 

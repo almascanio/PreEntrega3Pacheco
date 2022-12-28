@@ -1,0 +1,21 @@
+{
+  "name": "miproyecto",
+  "version": "1.0.0",
+  "description": "Proyecto Coderhouse Desarrollo Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass scss/style.scss styles/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almascanio/PreEntrega2Pacheco.git"
+  },
+  "author": "Almary Pacheco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/almascanio/PreEntrega2Pacheco/issues"
+  },
+  "homepage": "https://github.com/almascanio/PreEntrega2Pacheco#readme"
+}

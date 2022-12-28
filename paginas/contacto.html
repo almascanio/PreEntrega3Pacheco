@@ -9,20 +9,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,500;0,700;1,200;1,300;1,500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../estilos/css/estilos.css">
 </head>
     <body>
         <header class="header">
-            <img src="../img/logo-removebg-preview.png" alt="Logo">
-                <nav class="header__nav">
-                <ul class="header__lista">
-                    <li class="header__item"><a href="../paginas/soy.html">Soy</a></li>
-                    <li class="header__item"><a href="../paginas/catalogo.html">Catalogo</a></li>
-                    <li class="header__item"><a href="../paginas/cuidados.html">Cuidados</a></li>
-                    <li class="header__item"><a href="../paginas/envios.html">Envios</a></li>
-                    <li class="header__item"><a href="../paginas/contacto.html">Contacto</a></li>
-                </ul>
-                </nav>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../img/logo-removebg-preview.png" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../paginas/soy.html">Soy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../paginas/catalogo.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../paginas/cuidados.html">Cuidados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../paginas/envios.html">Envios</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="../paginas/contacto.html">Contacto</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
             </header>
     <main class="main__contacto">
             <h1 class="main__tittle-contacto">Quieres contactarte con nosotros? Responde el siguiente formulario:</h1>
@@ -90,17 +112,16 @@
             </fieldset>
         </form>
     </main>
-        <footer class="footer-contacto">
-            <div class="footer__div-contacto">
-                <p class="footer__descrip-contacto">Nos estaremos comunicando contigo en las proximas 24h:</p>
-            </div>
-            <h2 class="footer__tittle-contacto">Siguenos en las redes sociales</h5>
-                <div class="footer__div-contacto">
-                    <p class="footer__description-contacto"> <span class="blackCuatro">Facebook:</span> Tinslean Accesories</p>
-                    <p class="footer__description-contacto"> <span class="blackCinco">Instagram:</span> @tinsleansories</p>
-                    <p class="footer__description-contacto"> <span class="blackSeis">WhatsApp:</span> 1127375998</p>
-                    <p class="footer__description-contacto"> <span class="blackSiete">Sucursal</span> Avenida Triunvirato 3656, Parque Chas, CABA</p>
-                </div>
-        </footer>
+    <footer class="footer">
+        <h5 class="footer__tittle">Siguenos en las redes sociales</h5>
+        <ul class="footer__ul">
+            <li class="footer__ul-li"><i class="bi bi-facebook"></i></li>
+            <li class="footer__ul-li"><i class="bi bi-instagram"></i></li>
+            <li class="footer__ul-li"><i class="bi bi-whatsapp"></i></li>
+            <li class="footer__ul-li"><i class="bi bi-geo-alt"></i></li>
+        </ul>
+    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     </body>
 </html
