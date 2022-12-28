@@ -5,6 +5,21 @@
 }
 /*Index*/
 .header{
+    position: sticky;
+    top: 0px;
+}
+.navbar{
+    width: 100%;
+}
+.nav-link{
+   color: #8c2f39; 
+   font-size: 1.5rem;
+}
+.navbar-collapse {
+    flex-grow: initial;
+}
+/*Index*/
+/*.header{
     background-image: linear-gradient(#8c2f39, #f0d0cb);
     position: sticky;
     top: 0px;
@@ -26,10 +41,7 @@
     text-decoration: none;
     color: black;
 }
-.header__item a:hover{
-    background-color: transparent;
-    color: white;
-}
+
 .main__index{
     height: 80vh;
     background-image: url(https://img.elo7.com.br/product/main/19D1B80/anel-cravejado-com-zirconias-folheado-em-ouro-18k.jpg);
