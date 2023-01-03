@@ -1,28 +1,9 @@
- $bordo: #8c2f39;
- $rosa: #f0d0cb; 
- $blanco: white; 
- $negro: black; 
+@import "variables";
+@import "estilosGenerales"; 
+@import "mediasQueries";
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "raleway", sans-serif;
-  }
-  .navbar{
-    background-color: $bordo;
-    position: sticky;
-    top: 0%;
-    left: 0%;
-    width: 100%;
 
-      &__nav-item {
-    color: $rosa;
-    font-size: 1.5rem;
-  }
-      &__collapse {
-    justify-content: flex-end;
-  }
-}
+/*Inicio Index*/
   .main__index {
     height: 80vh;
     background-image: url(https://img.elo7.com.br/product/main/19D1B80/anel-cravejado-com-zirconias-folheado-em-ouro-18k.jpg);
@@ -31,6 +12,7 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(8, 1fr);
+    border-top: 1px solid $blanco;
 
     div{
       grid-column: 7/10;
@@ -44,7 +26,7 @@
         font-size: 4rem;
         color: $bordo;
         text-transform: uppercase;
-        text-shadow: 5px 5px 10px $blanco;
+        text-shadow: $shadow;
       } 
       p {
         font-weight: 500;
@@ -52,163 +34,123 @@
     }
 }
   .button {
-    display: block;
-    width: 50px;
-    font-weight: 500;
-    font-size: 0.8rem;
-    background: none;
-    color: $negro;
-    padding: 10px 20px;
-    margin-top: 20px;
-    text-decoration: none;
+    padding: 15px 30px;
+    background-color: $rosa;
+    color: $bordo;
+    font-weight: bold;
+    border-radius: 10px;
 
       &:hover {
         background-color: transparent;
         border: 2px solid $bordo;
         color: $blanco;
     }
-  } 
-  
-  .footer {
-    color: $bordo;
-    font-size: 1.5rem;
-    padding: 30px;
-    margin-top: 20px;
-    border-top: 1px solid $negro;
-    
-    &__tittle {
+  }   
+  /*Fin Index*/
+  /*Soy*/
+  .main{
+    background-color: $blanco;
+
+    &__tittle-soy {
       color: $bordo;
-      font-size: 1.5em;
+      font-size: 1.5rem;
       text-transform: uppercase;
-      text-shadow: 5px 5px 10px $blanco;
+      text-shadow: $shadow;
       text-align: center;
       padding: 10px;
     }
-    
-    ul {
-    display: flex;
-    justify-content: center;
 
-      li {
-      list-style-type: none;
-      margin: 0px 10px;
+    &__article-soy {
+      display: flex;
+      padding: 30px;
+      align-items: center;
+    }
+
+    &__imagen-soy {
+      width: 150px;
+      height: 150px;
+    }
+
+    &__description-soy {
+      letter-spacing: 0.1rem;
+      padding: 5px;
+      margin: 5px;
+    }
+
+    &__div {
+      display: flex;
+      flex-direction: row;
+      margin: 10px;
+      padding: 10px;
     }
   }
-}
-  .bi {
-    font-size: 2rem;
-    
-      &:hover{
-      color: $rosa;
-    }
-}
-  
-  /*Fin Index*/
-  /*Soy*/
-  .main__tittle-soy {
-    color: $bordo;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-shadow: 5px 5px 10px $blanco;
-    text-align: center;
-    padding: 10px;
-  main__article-soy {
-    display: flex;
-    padding: 30px;
-    align-items: center;
-  }
-  main__imagen-soy {
-    width: 150px;
-    height: 150px;
-  }
-  main__description-soy {
-    letter-spacing: 0.1rem;
-    padding: 5px;
-    margin: 5px;
-  }
-  main__div {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    padding: 10px;
-  }
-}
   /*Fin soy*/
   /*Catalogo*/
-  .main__tittle-catalogo {
-    color: $bordo;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-shadow: 5px 5px 10px $blanco;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .main__imagenp {
-    width: 300px;
-    height: 300px;
-    transition: all 1.5s;
-  }
-  
-  .main__imagenp:hover {
-    transform: scale(1.2);
-  }
-  
-  .main__container-catalogo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 50px;
-    padding: 20px;
-    margin: 20px 0px;
-    justify-items: center;
-  }
-  .div__email {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    padding: 5px;
-    margin: 5px 0px;
+  .main{
+    background-color: $blanco;
+
+    .main__tittle {
+      color: $bordo;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      text-shadow: $shadow;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .main__container-galeria {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 50px;
+      padding: 20px;
+      margin: 20px 0px;
+      justify-items: center;
+
+    .main__container-imagenp {
+        width: 300px;
+        height: 300px;
+        transition: all 1.5s;
+
+          &:hover {
+            transform: scale(1.2);
+      }
+      }
+    }
   }
   
   /*Fin Catalogo*/
   /*Cuidados*/
-  .main__tittle-cuidados {
-    color: $bordo;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-shadow: 5px 5px 10px $blanco;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .main__descrip-cuidados {
-    text-align: center;
-    letter-spacing: 0.1rem;
-    padding: 5px;
-    margin: 5px;
-  }
-  
-  .main__lista-cu {
-    text-align: center;
-    letter-spacing: 0.1rem;
-    padding: 5px;
-    margin: 5px;
-  }
-  
-  .main-cuidados {
+  .main__cuidados{
     display: flex;
     flex-direction: column;
+    background-color: $blanco;
+
+    .main__cuidados-tittle {
+      color: $bordo;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      text-shadow: $shadow;
+      text-align: center;
+      padding: 10px;
+    }
   }
-  
-  .main__tittle-cuidados {
-    color: $bordo;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-shadow: 5px 5px 10px $blanco;
-    text-align: center;
-    padding: 10px;
+
+  .main__article {
+      .main__descrip-cuidados {
+        text-align: center;
+        letter-spacing: 0.1rem;
+        padding: 5px;
+        margin: 5px;
+    }
+
+      .main__lista-cu{
+        text-align: center;
+        letter-spacing: 0.1rem;
+        padding: 5px;
+        margin: 5px;
+        list-style-type: none;
+    }
   }
   
   .video-div {
@@ -222,75 +164,72 @@
 
   /*Fin cuidados*/
   /*Envios*/
-  .main__tittle-envios {
-    color: $bordo;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-shadow: 5px 5px 10px $blanco;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .main_envios {
+  .main__envios {
     display: flex;
     flex-direction: column;
-  }
-  
-  .main__descrip-envios {
-    text-align: center;
-    padding: 5px;
-    margin: 5px;
-    letter-spacing: 0.1rem;
-  }
-  
-  .main__tittle-envios {
-    color: $bordo;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-shadow: 5px 5px 10px $blanco;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .main__ord-envios {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .main__lista-envios {
-    text-align: center;
-    padding: 5px;
-    margin: 5px;
-    list-style: none;
-    letter-spacing: 0.1rem;
+    background-color: $blanco;
+
+      .main__tittle-envios {
+        color: $bordo;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        text-shadow: $shadow;
+        text-align: center;
+        padding: 10px;
+    }
+}
+  .main__article {
+      .main__descrip-envios {
+      text-align: center;
+      padding: 5px;
+      margin: 5px;
+      letter-spacing: 0.1rem;
+    }
+    .main__ord-envios {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+
+        &__lista-envios {
+          text-align: center;
+          padding: 5px;
+          margin: 5px;
+          letter-spacing: 0.1rem;
+      }
+    }
   }
   
   /*Fin envios*/
   /*Contacto*/
-  .main__tittle-contacto {
-    color: $bordo;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-shadow: 5px 5px 10px $blanco;
-    text-align: center;
-    padding: 5px;
-    margin: 5px;
+  .main__contacto{
+    display: flex;
+    flex-direction: column;
+
+    .main__tittle-contacto {
+      color: $bordo;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      text-shadow: $shadow;
+      text-align: center;
+      padding: 5px;
+      margin: 5px;
   }
+}
   
   .form__container {
     display: flex;
     justify-content: center;
     margin: 50px 0px;
     padding: 20px;
-  }
-  
-  .form__container-fieldset {
-    padding: 20px;
-    background: $rosa;
-    color: $bordo;
-    border: 1px solid $bordo;
-    border-radius: 10px;
-    font-size: 1.2rem;
+
+    .form__container-fieldset {
+      padding: 20px;
+      background: $rosa;
+      color: $bordo;
+      border: 1px solid $bordo;
+      border-radius: 10px;
+      font-size: 1.2rem;
+    }
   }
   
   .bottons {
@@ -301,6 +240,10 @@
     color: $rosa;
     margin: 12px 0px;
     font-size: 14px;
+
+      &:hover {
+        color: $blanco;
+      }
   }
   /*Fin contacto*/
   @media only screen and (max-width: 576px) {
@@ -323,7 +266,7 @@
     }
     /*Fin soy*/
     /*Catalogo*/
-    .main__container-catalogo {
+    .main__container-galeria {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(30, 1fr);
     }

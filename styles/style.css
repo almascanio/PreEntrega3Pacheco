@@ -4,21 +4,82 @@
   font-family: "raleway", sans-serif;
 }
 
+/*Inicio Index*/
 .navbar {
-  background-color: #8c2f39;
+  background-color: #f0d0cb;
   position: sticky;
   top: 0%;
   left: 0%;
   width: 100%;
 }
-.navbar__nav-item {
-  color: #f0d0cb;
+.navbar .navbar-collapse {
+  flex-grow: initial;
+}
+.navbar .nav-link {
+  color: #8c2f39;
   font-size: 1.5rem;
 }
-.navbar__collapse {
-  justify-content: flex-end;
+.navbar .nav-link:hover {
+  color: white;
 }
 
+.footer {
+  background-color: #f0d0cb;
+  font-size: 1.5rem;
+  padding: 30px;
+  margin-top: 0px;
+  border-top: 1px solid white;
+}
+.footer__tittle {
+  color: #8c2f39;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 10px white;
+  text-align: center;
+  padding: 0px;
+}
+.footer ul {
+  display: flex;
+  justify-content: center;
+}
+.footer ul li {
+  list-style-type: none;
+  margin: 0px 10px;
+}
+
+.bi {
+  font-size: 2rem;
+}
+.bi:hover {
+  color: #8c2f39;
+}
+
+@media only screen and (max-width: 576px) {
+  /*Index*/
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__nav {
+    justify-content: center;
+  }
+  /*Fin Index*/
+  /*Soy*/
+  .main__article-soy {
+    flex-direction: column;
+  }
+  .main__imagen-soy {
+    width: 300px;
+    height: 250px;
+  }
+  /*Fin soy*/
+  /*Catalogo*/
+  .main__container-galeria {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+  }
+}
+/*Inicio Index*/
 .main__index {
   height: 80vh;
   background-image: url(https://img.elo7.com.br/product/main/19D1B80/anel-cravejado-com-zirconias-folheado-em-ouro-18k.jpg);
@@ -27,6 +88,7 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(8, 1fr);
+  border-top: 1px solid white;
 }
 .main__index div {
   grid-column: 7/10;
@@ -47,15 +109,11 @@
 }
 
 .button {
-  display: block;
-  width: 50px;
-  font-weight: 500;
-  font-size: 0.8rem;
-  background: none;
-  color: black;
-  padding: 10px 20px;
-  margin-top: 20px;
-  text-decoration: none;
+  padding: 15px 30px;
+  background-color: #f0d0cb;
+  color: #8c2f39;
+  font-weight: bold;
+  border-radius: 10px;
 }
 .button:hover {
   background-color: transparent;
@@ -63,39 +121,11 @@
   color: white;
 }
 
-.footer {
-  color: #8c2f39;
-  font-size: 1.5rem;
-  padding: 30px;
-  margin-top: 20px;
-  border-top: 1px solid black;
-}
-.footer__tittle {
-  color: #8c2f39;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  text-shadow: 5px 5px 10px white;
-  text-align: center;
-  padding: 10px;
-}
-.footer ul {
-  display: flex;
-  justify-content: center;
-}
-.footer ul li {
-  list-style-type: none;
-  margin: 0px 10px;
-}
-
-.bi {
-  font-size: 2rem;
-}
-.bi:hover {
-  color: #f0d0cb;
-}
-
 /*Fin Index*/
 /*Soy*/
+.main {
+  background-color: white;
+}
 .main__tittle-soy {
   color: #8c2f39;
   font-size: 1.5rem;
@@ -104,21 +134,21 @@
   text-align: center;
   padding: 10px;
 }
-.main__tittle-soy main__article-soy {
+.main__article-soy {
   display: flex;
   padding: 30px;
   align-items: center;
 }
-.main__tittle-soy main__imagen-soy {
+.main__imagen-soy {
   width: 150px;
   height: 150px;
 }
-.main__tittle-soy main__description-soy {
+.main__description-soy {
   letter-spacing: 0.1rem;
   padding: 5px;
   margin: 5px;
 }
-.main__tittle-soy main__div {
+.main__div {
   display: flex;
   flex-direction: row;
   margin: 10px;
@@ -127,7 +157,10 @@
 
 /*Fin soy*/
 /*Catalogo*/
-.main__tittle-catalogo {
+.main {
+  background-color: white;
+}
+.main .main__tittle {
   color: #8c2f39;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -135,18 +168,7 @@
   text-align: center;
   padding: 10px;
 }
-
-.main__imagenp {
-  width: 300px;
-  height: 300px;
-  transition: all 1.5s;
-}
-
-.main__imagenp:hover {
-  transform: scale(1.2);
-}
-
-.main__container-catalogo {
+.main .main__container-galeria {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -155,53 +177,43 @@
   margin: 20px 0px;
   justify-items: center;
 }
-
-.div__email {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  padding: 5px;
-  margin: 5px 0px;
+.main .main__container-galeria .main__container-imagenp {
+  width: 300px;
+  height: 300px;
+  transition: all 1.5s;
+}
+.main .main__container-galeria .main__container-imagenp:hover {
+  transform: scale(1.2);
 }
 
 /*Fin Catalogo*/
 /*Cuidados*/
-.main__tittle-cuidados {
-  color: #8c2f39;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-shadow: 5px 5px 10px white;
-  text-align: center;
-  padding: 10px;
-}
-
-.main__descrip-cuidados {
-  text-align: center;
-  letter-spacing: 0.1rem;
-  padding: 5px;
-  margin: 5px;
-}
-
-.main__lista-cu {
-  text-align: center;
-  letter-spacing: 0.1rem;
-  padding: 5px;
-  margin: 5px;
-}
-
-.main-cuidados {
+.main__cuidados {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
-
-.main__tittle-cuidados {
+.main__cuidados .main__cuidados-tittle {
   color: #8c2f39;
   font-size: 1.5rem;
   text-transform: uppercase;
   text-shadow: 5px 5px 10px white;
   text-align: center;
   padding: 10px;
+}
+
+.main__article .main__descrip-cuidados {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  padding: 5px;
+  margin: 5px;
+}
+.main__article .main__lista-cu {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  padding: 5px;
+  margin: 5px;
+  list-style-type: none;
 }
 
 .video-div {
@@ -215,7 +227,12 @@
 
 /*Fin cuidados*/
 /*Envios*/
-.main__tittle-envios {
+.main__envios {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.main__envios .main__tittle-envios {
   color: #8c2f39;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -224,43 +241,31 @@
   padding: 10px;
 }
 
-.main_envios {
-  display: flex;
-  flex-direction: column;
-}
-
-.main__descrip-envios {
+.main__article .main__descrip-envios {
   text-align: center;
   padding: 5px;
   margin: 5px;
   letter-spacing: 0.1rem;
 }
-
-.main__tittle-envios {
-  color: #8c2f39;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-shadow: 5px 5px 10px white;
-  text-align: center;
-  padding: 10px;
-}
-
-.main__ord-envios {
+.main__article .main__ord-envios {
   display: flex;
   flex-direction: column;
+  list-style-type: none;
 }
-
-.main__lista-envios {
+.main__article .main__ord-envios__lista-envios {
   text-align: center;
   padding: 5px;
   margin: 5px;
-  list-style: none;
   letter-spacing: 0.1rem;
 }
 
 /*Fin envios*/
 /*Contacto*/
-.main__tittle-contacto {
+.main__contacto {
+  display: flex;
+  flex-direction: column;
+}
+.main__contacto .main__tittle-contacto {
   color: #8c2f39;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -276,8 +281,7 @@
   margin: 50px 0px;
   padding: 20px;
 }
-
-.form__container-fieldset {
+.form__container .form__container-fieldset {
   padding: 20px;
   background: #f0d0cb;
   color: #8c2f39;
@@ -294,6 +298,9 @@
   color: #f0d0cb;
   margin: 12px 0px;
   font-size: 14px;
+}
+.bottons:hover {
+  color: white;
 }
 
 /*Fin contacto*/
@@ -317,7 +324,7 @@
   }
   /*Fin soy*/
   /*Catalogo*/
-  .main__container-catalogo {
+  .main__container-galeria {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(30, 1fr);
   }
