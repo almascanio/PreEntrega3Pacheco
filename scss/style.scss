@@ -9,9 +9,8 @@
     background-image: url(https://img.elo7.com.br/product/main/19D1B80/anel-cravejado-com-zirconias-folheado-em-ouro-18k.jpg);
     background-size: cover;
     max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    @include grid(10, 1fr);
+    @include grid(8, 1fr);
     border-top: 1px solid $blanco;
 
     div{
@@ -47,17 +46,12 @@
     }
   }   
   /*Fin Index*/
-  /*Soy*/
+  /*Inicio Soy*/
   .main{
     background-color: $blanco;
 
     &__tittle-soy {
-      color: $bordo;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      text-shadow: $shadow;
-      text-align: center;
-      padding: 10px;
+      @extend .tittle; 
     }
 
     &__article-soy {
@@ -72,9 +66,7 @@
     }
 
     &__description-soy {
-      letter-spacing: 0.1rem;
-      padding: 5px;
-      margin: 5px;
+      @extend .description;
     }
 
     &__div {
@@ -85,23 +77,17 @@
     }
   }
   /*Fin soy*/
-  /*Catalogo*/
+  /* Inicio Catalogo*/
   .main{
     background-color: $blanco;
 
     .main__tittle {
-      color: $bordo;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      text-shadow: $shadow;
-      text-align: center;
-      padding: 10px;
+      @extend .tittle;
     }
 
     .main__container-galeria {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(5, 1fr);
+      @include grid(5, 1fr);
+      @include grid(3, 1fr);
       gap: 50px;
       padding: 20px;
       margin: 20px 0px;
@@ -120,28 +106,20 @@
   }
   
   /*Fin Catalogo*/
-  /*Cuidados*/
+  /*Inicio Cuidados*/
   .main__cuidados{
     display: flex;
     flex-direction: column;
     background-color: $blanco;
 
     .main__cuidados-tittle {
-      color: $bordo;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      text-shadow: $shadow;
-      text-align: center;
-      padding: 10px;
+      @extend .tittle; 
     }
   }
 
   .main__article {
       .main__descrip-cuidados {
-        text-align: center;
-        letter-spacing: 0.1rem;
-        padding: 5px;
-        margin: 5px;
+        @extend .description;
     }
 
       .main__lista-cu{
@@ -163,34 +141,26 @@
   }
 
   /*Fin cuidados*/
-  /*Envios*/
+  /*Inicio Envios*/
   .main__envios {
     display: flex;
     flex-direction: column;
     background-color: $blanco;
 
       .main__tittle-envios {
-        color: $bordo;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        text-shadow: $shadow;
-        text-align: center;
-        padding: 10px;
+        @extend .tittle;
     }
 }
   .main__article {
       .main__descrip-envios {
-      text-align: center;
-      padding: 5px;
-      margin: 5px;
-      letter-spacing: 0.1rem;
+        @extend .description;
     }
     .main__ord-envios {
       display: flex;
       flex-direction: column;
       list-style-type: none;
 
-        &__lista-envios {
+        li {
           text-align: center;
           padding: 5px;
           margin: 5px;
@@ -200,19 +170,13 @@
   }
   
   /*Fin envios*/
-  /*Contacto*/
+  /* Inicio Contacto*/
   .main__contacto{
     display: flex;
     flex-direction: column;
 
     .main__tittle-contacto {
-      color: $bordo;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      text-shadow: $shadow;
-      text-align: center;
-      padding: 5px;
-      margin: 5px;
+      @extend .tittle;
   }
 }
   
@@ -247,7 +211,7 @@
   }
   /*Fin contacto*/
   @media only screen and (max-width: 576px) {
-    /*Index*/
+    /*Iinicio Index*/
     .header {
       flex-direction: column;
       align-items: center;
@@ -256,7 +220,7 @@
       justify-content: center;
     }
     /*Fin Index*/
-    /*Soy*/
+    /*Inicio Soy*/
     .main__article-soy {
       flex-direction: column;
     }
@@ -265,12 +229,13 @@
       height: 250px;
     }
     /*Fin soy*/
-    /*Catalogo*/
+    /*Inicio Galeria*/
     .main__container-galeria {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(30, 1fr);
     }
-    /*Catalogo*/
-    /*Cuidados*/
+    /*Galeria Fin*/
+    /*Inicio Contacto*/
+    /*Contacto Fin*/
   }
   

@@ -33,12 +33,7 @@
     border-top: 1px solid $blanco;
     
     &__tittle {
-        color: $bordo;
-        font-size: 1.2em;
-        text-transform: uppercase;
-        text-shadow: 5px 5px 10px $blanco;
-        text-align: center;
-        padding: 0px;
+        @extend .tittle;
     }
     
     ul {
@@ -57,4 +52,34 @@
             &:hover{
                 color: $bordo;
     }
+}
+
+/*Fin Index*/
+
+// Extends
+
+.tittle {
+    color: $bordo;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: $shadow;
+    text-align: center;
+    padding: 10px;
+}
+
+.description {
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+}
+
+
+// Mixin
+
+@mixin grid($cantidadColumna, $cantidadFila) {
+    display: grid;
+    grid-template-columns: repeat($cantidadColumna, 1fr);
+    grid-template-rows: repeat($cantidadFila, 1fr);
 }

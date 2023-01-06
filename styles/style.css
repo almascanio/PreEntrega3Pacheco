@@ -30,14 +30,6 @@
   margin-top: 0px;
   border-top: 1px solid white;
 }
-.footer__tittle {
-  color: #8c2f39;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  text-shadow: 5px 5px 10px white;
-  text-align: center;
-  padding: 0px;
-}
 .footer ul {
   display: flex;
   justify-content: center;
@@ -52,6 +44,24 @@
 }
 .bi:hover {
   color: #8c2f39;
+}
+
+/*Fin Index*/
+.tittle, .main__contacto .main__tittle-contacto, .main__envios .main__tittle-envios, .main__cuidados .main__cuidados-tittle, .main .main__tittle, .main__tittle-soy, .footer__tittle {
+  color: #8c2f39;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 10px white;
+  text-align: center;
+  padding: 10px;
+}
+
+.description, .main__article .main__descrip-envios, .main__article .main__descrip-cuidados, .main__description-soy {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 576px) {
@@ -87,7 +97,10 @@
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(1fr, 1fr);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(1fr, 1fr);
   border-top: 1px solid white;
 }
 .main__index div {
@@ -122,17 +135,9 @@
 }
 
 /*Fin Index*/
-/*Soy*/
+/*Inicio Soy*/
 .main {
   background-color: white;
-}
-.main__tittle-soy {
-  color: #8c2f39;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-shadow: 5px 5px 10px white;
-  text-align: center;
-  padding: 10px;
 }
 .main__article-soy {
   display: flex;
@@ -143,11 +148,6 @@
   width: 150px;
   height: 150px;
 }
-.main__description-soy {
-  letter-spacing: 0.1rem;
-  padding: 5px;
-  margin: 5px;
-}
 .main__div {
   display: flex;
   flex-direction: row;
@@ -156,22 +156,17 @@
 }
 
 /*Fin soy*/
-/*Catalogo*/
+/* Inicio Catalogo*/
 .main {
   background-color: white;
 }
-.main .main__tittle {
-  color: #8c2f39;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-shadow: 5px 5px 10px white;
-  text-align: center;
-  padding: 10px;
-}
 .main .main__container-galeria {
   display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1fr, 1fr);
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(1fr, 1fr);
   gap: 50px;
   padding: 20px;
   margin: 20px 0px;
@@ -187,26 +182,11 @@
 }
 
 /*Fin Catalogo*/
-/*Cuidados*/
+/*Inicio Cuidados*/
 .main__cuidados {
   display: flex;
   flex-direction: column;
   background-color: white;
-}
-.main__cuidados .main__cuidados-tittle {
-  color: #8c2f39;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-shadow: 5px 5px 10px white;
-  text-align: center;
-  padding: 10px;
-}
-
-.main__article .main__descrip-cuidados {
-  text-align: center;
-  letter-spacing: 0.1rem;
-  padding: 5px;
-  margin: 5px;
 }
 .main__article .main__lista-cu {
   text-align: center;
@@ -226,33 +206,18 @@
 }
 
 /*Fin cuidados*/
-/*Envios*/
+/*Inicio Envios*/
 .main__envios {
   display: flex;
   flex-direction: column;
   background-color: white;
-}
-.main__envios .main__tittle-envios {
-  color: #8c2f39;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-shadow: 5px 5px 10px white;
-  text-align: center;
-  padding: 10px;
-}
-
-.main__article .main__descrip-envios {
-  text-align: center;
-  padding: 5px;
-  margin: 5px;
-  letter-spacing: 0.1rem;
 }
 .main__article .main__ord-envios {
   display: flex;
   flex-direction: column;
   list-style-type: none;
 }
-.main__article .main__ord-envios__lista-envios {
+.main__article .main__ord-envios li {
   text-align: center;
   padding: 5px;
   margin: 5px;
@@ -260,21 +225,11 @@
 }
 
 /*Fin envios*/
-/*Contacto*/
+/* Inicio Contacto*/
 .main__contacto {
   display: flex;
   flex-direction: column;
 }
-.main__contacto .main__tittle-contacto {
-  color: #8c2f39;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-shadow: 5px 5px 10px white;
-  text-align: center;
-  padding: 5px;
-  margin: 5px;
-}
-
 .form__container {
   display: flex;
   justify-content: center;
@@ -305,7 +260,7 @@
 
 /*Fin contacto*/
 @media only screen and (max-width: 576px) {
-  /*Index*/
+  /*Iinicio Index*/
   .header {
     flex-direction: column;
     align-items: center;
@@ -314,7 +269,7 @@
     justify-content: center;
   }
   /*Fin Index*/
-  /*Soy*/
+  /*Inicio Soy*/
   .main__article-soy {
     flex-direction: column;
   }
@@ -323,13 +278,14 @@
     height: 250px;
   }
   /*Fin soy*/
-  /*Catalogo*/
+  /*Inicio Galeria*/
   .main__container-galeria {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(30, 1fr);
   }
-  /*Catalogo*/
-  /*Cuidados*/
+  /*Galeria Fin*/
+  /*Inicio Contacto*/
+  /*Contacto Fin*/
 }
 
 /*# sourceMappingURL=style.css.map */
