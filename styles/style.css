@@ -54,6 +54,7 @@
   text-shadow: 5px 5px 10px white;
   text-align: center;
   padding: 10px;
+  font-weight: bold;
 }
 
 .description, .main__article .main__descrip-envios, .main__article .main__descrip-cuidados, .main__description-soy {
@@ -64,8 +65,8 @@
   font-size: 1.2rem;
 }
 
-@media only screen and (max-width: 576px) {
-  /*Index*/
+@media only screen and (max-width: 576px) and (max-width: 576px) {
+  /*Iinicio Index*/
   .header {
     flex-direction: column;
     align-items: center;
@@ -74,7 +75,7 @@
     justify-content: center;
   }
   /*Fin Index*/
-  /*Soy*/
+  /*Inicio Soy*/
   .main__article-soy {
     flex-direction: column;
   }
@@ -83,15 +84,22 @@
     height: 250px;
   }
   /*Fin soy*/
-  /*Catalogo*/
+  /*Inicio Galeria*/
   .main__container-galeria {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(30, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
   }
+  /*Galeria Fin*/
+  /*Inicio Contacto*/
+  /*Contacto Fin*/
 }
 /*Inicio Index*/
 .main__index {
-  height: 80vh;
+  height: 100vh;
   background-image: url(https://img.elo7.com.br/product/main/19D1B80/anel-cravejado-com-zirconias-folheado-em-ouro-18k.jpg);
   background-size: cover;
   max-width: 100%;
@@ -156,7 +164,7 @@
 }
 
 /*Fin soy*/
-/* Inicio Catalogo*/
+/* Inicio Galeria*/
 .main {
   background-color: white;
 }
@@ -181,7 +189,7 @@
   transform: scale(1.2);
 }
 
-/*Fin Catalogo*/
+/*Fin Galeria*/
 /*Inicio Cuidados*/
 .main__cuidados {
   display: flex;
@@ -227,6 +235,10 @@
 /*Fin envios*/
 /* Inicio Contacto*/
 .main__contacto {
+  height: 100vh;
+  background-image: url(../img/fondocontacto.jpeg);
+  background-size: cover;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -234,15 +246,26 @@
   display: flex;
   justify-content: center;
   margin: 50px 0px;
-  padding: 20px;
+  padding-top: 10px;
 }
 .form__container .form__container-fieldset {
   padding: 20px;
-  background: #f0d0cb;
-  color: #8c2f39;
+  background: rgba(246, 204, 189, 0.4);
+  color: black;
   border: 1px solid #8c2f39;
   border-radius: 10px;
   font-size: 1.2rem;
+}
+.form__container legend {
+  color: black;
+  font-weight: bold;
+}
+.form__container .div__controls {
+  background: rgba(249, 249, 250, 0.1);
+  border: 1px solid #8c2f39;
+  border-radius: 2px;
+  padding: 2px;
+  margin: 2px;
 }
 
 .bottons {
@@ -259,33 +282,5 @@
 }
 
 /*Fin contacto*/
-@media only screen and (max-width: 576px) {
-  /*Iinicio Index*/
-  .header {
-    flex-direction: column;
-    align-items: center;
-  }
-  .header__nav {
-    justify-content: center;
-  }
-  /*Fin Index*/
-  /*Inicio Soy*/
-  .main__article-soy {
-    flex-direction: column;
-  }
-  .main__imagen-soy {
-    width: 300px;
-    height: 250px;
-  }
-  /*Fin soy*/
-  /*Inicio Galeria*/
-  .main__container-galeria {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(30, 1fr);
-  }
-  /*Galeria Fin*/
-  /*Inicio Contacto*/
-  /*Contacto Fin*/
-}
 
 /*# sourceMappingURL=style.css.map */

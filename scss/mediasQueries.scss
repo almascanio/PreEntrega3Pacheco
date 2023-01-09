@@ -20,8 +20,8 @@
         /*Fin soy*/
         /*Inicio Galeria*/
         .main__container-galeria {
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(30, 1fr);
+            @include grid(1, 1fr);
+            @include grid(30, 1fr);
         }
         /*Galeria Fin*/
         /*Inicio Contacto*/
