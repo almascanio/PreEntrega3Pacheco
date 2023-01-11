@@ -112,33 +112,37 @@
   border-top: 1px solid white;
 }
 .main__index div {
-  grid-column: 7/10;
-  grid-row: 2/7;
+  grid-column: 6/10;
+  grid-row: 3/7;
 }
 .main__index div h1 {
   font-size: 2.5rem;
   font-weight: 500;
+  margin: 5px;
 }
 .main__index div h2 {
-  font-size: 4rem;
+  font-size: 5rem;
   color: #8c2f39;
   text-transform: uppercase;
   text-shadow: 5px 5px 10px white;
 }
 .main__index div p {
   font-weight: 500;
+  color: white;
+  font-weight: bold;
 }
 
 .button {
-  padding: 15px 30px;
+  padding: 10px 30px;
   background-color: #f0d0cb;
   color: #8c2f39;
   font-weight: bold;
   border-radius: 10px;
+  text-decoration: none;
 }
 .button:hover {
   background-color: transparent;
-  border: 2px solid #8c2f39;
+  border: 5px solid #8c2f39;
   color: white;
 }
 
