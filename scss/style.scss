@@ -1,7 +1,5 @@
 @import "variables";
 @import "estilosGenerales"; 
-@import "mediasQueries";
-
 
 /*Inicio Index*/
   .main__index {
@@ -9,26 +7,28 @@
     background-image: url(https://img.elo7.com.br/product/main/19D1B80/anel-cravejado-com-zirconias-folheado-em-ouro-18k.jpg);
     background-size: cover;
     max-width: 100%;
-    @include grid(10, 1fr);
-    @include grid(8, 1fr);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     border-top: 1px solid $blanco;
 
     div{
-      grid-column: 6/10;
-      grid-row: 3/7;
+      grid-column: 7/10;
+      grid-row: 2/7;
 
       h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: 500;
         margin: 5px;
       }
       h2 {
-        font-size: 5rem;
+        font-size: 5.5rem;
         color: $bordo;
         text-transform: uppercase;
         text-shadow: $shadow;
       } 
       p {
+        font-size: 1.5rem;
         font-weight: 500;
         color: $blanco;
         font-weight: bold;
@@ -42,6 +42,7 @@
     font-weight: bold;
     border-radius: 10px;
     text-decoration: none;
+    font-size: 1.5rem;
 
       &:hover {
         background-color: transparent;
@@ -67,6 +68,8 @@
     &__imagen-soy {
       width: 150px;
       height: 150px;
+      border-radius: 10px;
+      padding: 5px;
     }
 
     &__description-soy {
@@ -76,8 +79,7 @@
     &__div {
       display: flex;
       flex-direction: row;
-      margin: 10px;
-      padding: 10px;
+      @include general(10px, 10px);
     }
   }
   /*Fin soy*/
@@ -90,11 +92,11 @@
     }
 
     .main__container-galeria {
-      @include grid(5, 1fr);
-      @include grid(3, 1fr);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(5, 1fr);
       gap: 50px;
-      padding: 20px;
-      margin: 20px 0px;
+      @include general(20px, 20px);
       justify-items: center;
 
     .main__container-imagenp {
@@ -128,8 +130,7 @@
       .main__lista-cu{
         text-align: center;
         letter-spacing: 0.1rem;
-        padding: 5px;
-        margin: 5px;
+        @include general(5px, 5px);
         list-style-type: none;
     }
   }
@@ -139,8 +140,7 @@
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    padding: 10px;
-    margin: 10px 0px;
+    @include general(10px, 10px);
   }
 
   /*Fin cuidados*/
@@ -165,8 +165,7 @@
 
         li {
           text-align: center;
-          padding: 5px;
-          margin: 5px;
+          @include general(5px, 5px);
           letter-spacing: 0.1rem;
       }
     }
@@ -211,8 +210,7 @@
       background: rgba(249, 249, 250, 0.1);
       border: 1px solid $bordo;
       border-radius: 2px;
-      padding: 2px;
-      margin: 2px;
+      @include general(2px, 2px);
     }
   }
   
@@ -230,3 +228,113 @@
       }
   }
   /*Fin contacto*/
+
+  //Tablet//
+
+@media (max-width: 768px){
+
+  /*Inicio Index*/
+  .main__index{
+    
+    div{
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 3.2rem;
+      } 
+      p {
+        font-size: 0.8rem;
+      }
+    }
+}  
+
+.button {
+  padding: 6px 20px;
+  font-size: 1rem;
+}  
+
+  /*Fin Index*/
+
+  /*Inicio Soy*/
+  .main__article-soy {
+    flex-direction: column;
+}
+  .main__imagen-soy {
+    width: 300px;
+    height: 250px;
+}
+  /*Fin Soy*/
+
+  /*Inicio Galeria*/
+  .main{
+    .main__container-galeria{
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(15, 1fr);
+    }
+  }
+  /*Fin Galeria*/
+
+  /*Inicio Contacto*/
+  .form__container{
+    margin: 0px 0px;
+    padding-top: 0px;
+  }
+  /*Fin Contacto*/
+
+}
+
+//Mobile//
+
+@media (max-width: 576px) {
+
+      /*Inicio Index*/
+      .main__index{
+    
+        div{
+          h1 {
+            font-size: 1.5rem;
+          }
+          h2 {
+            font-size: 2.5rem;
+          } 
+          p {
+            font-size: 0.6rem;
+          }
+        }
+    } 
+    
+      .button {
+        padding: 6px 20px;
+        font-size: 0.5rem;
+      }  
+      /*Fin Index*/
+
+      /*Inicio Soy*/
+      .main__article-soy {
+          flex-direction: column;
+
+          &__imagen-soy {
+            width: 250px;
+            height: 200px;
+        }
+      }
+      /*Fin soy*/
+
+      /*Inicio Galeria*/
+      .main{
+        .main__container-galeria {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(30, 1fr);
+        }
+      }
+      /*Fin Galeria*/
+
+      /*Inicio Contacto*/
+      .form__container{
+        margin: 0px 0px;
+        padding-top: 0px;
+      }
+      /*Contacto Fin*/
+
+}

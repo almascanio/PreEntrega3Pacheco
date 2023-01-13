@@ -80,8 +80,7 @@
 
 // Mixin
 
-@mixin grid($cantidadColumna, $cantidadFila) {
-    display: grid;
-    grid-template-columns: repeat($cantidadColumna, 1fr);
-    grid-template-rows: repeat($cantidadFila, 1fr);
+@mixin general($margin, $padding){
+    margin: $margin;
+    padding: $padding;
 }
